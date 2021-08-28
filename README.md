@@ -26,7 +26,7 @@ En la salida de hiperterminal también se da información sobre el RSSI.
 ![Captura Hiperterminal](./documentation/Punto2_3_hiperterminal.png)
 
 ## Punto 4, Communicación serie entre ESP32 y APP:
-Commit .
+Commit 46dc7995.
 
 En base al ejemlo de la librería de ESP32 se prepara una comunicación serie entre el ESP32 y otro dispositivo Bluetooth. En este caso se usa un dispositivo móvil con una App. El programa en el ESP32 redirige la información recibida en el puerto serie y la envía por Bluetooth y en sentido contrario con la información recibida por Bluetooth.
 
