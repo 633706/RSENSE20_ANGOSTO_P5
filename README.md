@@ -3,8 +3,9 @@
 Desarrollado para la arduino IDE
 Repositorio para la práctica P5 de redes de sensores.
 
-## Puntos 2 y 3:
-Commit .
+## Puntos 2 y 3, iBeacon:
+Commit 46dc7995.
+
 Los puntos 2 y 3 de la práctica se realizan de manera conjunta ya que se usa un ESP32 como iBeacon y el otro como lector.
 
 El programa del iBeacon está basado en el ejemplo de arduino de iBeacon server y se modifica para que muestre por panatalla la MAC del dispositivo. En este caso los datos relevantes para la conexión son:
@@ -20,9 +21,19 @@ Como se usan los valores minor y major del iBeacon la información se encuentra 
 
 En la salida de hiperterminal también se da información sobre el RSSI.
 
-## Captura hiperteminal con datos.
+### Captura hiperteminal con datos.
 
 ![Captura Hiperterminal](./documentation/Punto2_3_hiperterminal.png)
+
+## Punto 4, Communicación serie entre ESP32 y APP:
+Commit .
+
+En base al ejemlo de la librería de ESP32 se prepara una comunicación serie entre el ESP32 y otro dispositivo Bluetooth. En este caso se usa un dispositivo móvil con una App. El programa en el ESP32 redirige la información recibida en el puerto serie y la envía por Bluetooth y en sentido contrario con la información recibida por Bluetooth.
+
+## Capturas de la comunicación.
+![Terminal ESP32](./documentation/Punto4_TerminalESP32.png)
+
+![Terminal ESP32](./documentation/Punto4_App.jpg)
 
 ---
 ## Bibliografía:

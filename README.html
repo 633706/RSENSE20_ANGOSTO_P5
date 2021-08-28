@@ -1,0 +1,65 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>README.md</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+
+        </style>
+  </head>
+  <body>
+    <h1 id="rsense20_angosto_p5">RSENSE20_ANGOSTO_P5</h1>
+    <p>Desarrollado para la arduino IDE
+Repositorio para la práctica P5 de redes de sensores.</p>
+    <h2 id="puntos-2-y-3-ibeacon">Puntos 2 y 3, iBeacon:</h2>
+    <p>Commit 46dc7995.</p>
+    <p>Los puntos 2 y 3 de la práctica se realizan de manera conjunta ya que se usa un ESP32 como iBeacon y el otro como lector.</p>
+    <p>El programa del iBeacon está basado en el ejemplo de arduino de iBeacon server y se modifica para que muestre por panatalla la MAC del dispositivo. En este caso los datos relevantes para la conexión son:</p>
+    <ul>
+      <li>UUID: 8ec76ea3-6668-48da-9866-75be8bc86f4d</li>
+      <li>MAC:  F854F3AB6224</li>
+    </ul>
+    <p>El ejemplo se modifica de tal manera que se envía un contador que incrementa cada segundo.</p>
+    <p>El programa en el lector de iBeacon se  modifica en base al programa de scaneo de dispositivos Bluetooth, de tal manera que se puede obtener la información del dispositivo deseado simplemente seleccionando los datos en función de la MAC del dispositivo, para ello se introduce en el prorgama la MAC del dispositivo que se quiere leer y se extrae el dato de contrador de la información proporcionada.</p>
+    <p>Como se usan los valores minor y major del iBeacon la información se encuentra en la información del Manufacturer y no Payload del iBeacon.</p>
+    <p>En la salida de hiperterminal también se da información sobre el RSSI.</p>
+    <h3 id="captura-hiperteminal-con-datos">Captura hiperteminal con datos.</h3>
+    <p>
+      <img src="./documentation/Punto2_3_hiperterminal.png" alt="Captura Hiperterminal" />
+    </p>
+    <h2 id="punto-4-communicacion-serie-entre-esp32-y-app">Punto 4, Communicación serie entre ESP32 y APP:</h2>
+    <p>Commit .</p>
+    <p>En base al ejemlo de la librería de ESP32 se prepara una comunicación serie entre el ESP32 y otro dispositivo Bluetooth. En este caso se usa un dispositivo móvil con una App. El programa en el ESP32 redirige la información recibida en el puerto serie y la envía por Bluetooth y en sentido contrario con la información recibida por Bluetooth.</p>
+    <h2 id="capturas-de-la-comunicacion">Capturas de la comunicación.</h2>
+    <p>
+      <img src="./documentation/Punto4_TerminalESP32.png" alt="Terminal ESP32" />
+    </p>
+    <p>
+      <img src="./documentation/Punto4_App.jpg" alt="Terminal ESP32" />
+    </p>
+    <hr />
+    <h2 id="bibliografia">Bibliografía:</h2>
+    <ul>
+      <li>
+        <a href="https://www.mokoblue.com/a-detailed-guide-to-ibeacon/">Guía iBeacon</a>
+      </li>
+      <li>
+        <a href="https://github.com/espressif/arduino-esp32/tree/master/libraries/BluetoothSerial">ESP32 BLE</a>
+      </li>
+      <li>
+        <a href="https://github.com/espressif/arduino-esp32/tree/master/libraries/BluetoothSerial">Bluetooth Serial library</a>
+      </li>
+      <li>
+        <a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal">Bluetooth Serial Terminal App</a>
+      </li>
+    </ul>
+    <hr />
+    <p>David Angosto Latorre, 633706</p>
+  </body>
+</html>
